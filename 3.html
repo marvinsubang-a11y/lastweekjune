@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ID THEFT PROGRAM - Amazon Fraud Control</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 20px;
+    background: url("photo1.jpeg") no-repeat center center fixed;
+    background-size: cover;
+  }
+  .overlay {
+    background: rgba(15, 15, 15, 0.94);
+    padding: 40px;
+    max-width: 950px;
+    margin: 40px auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.7);
+    border: 1px solid #333;
+  }
+  h1 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 35px;
+    color: #ffcc00;
+    font-size: 28px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #ffcc00;
+    padding-bottom: 15px;
+  }
+  .meta-header {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 25px;
+    padding-left: 10px;
+  }
+  .section-divider {
+    border-top: 1px dashed #444;
+    margin: 35px 0;
+  }
+  .dialogue-line {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    font-size: 16px;
+    display: flex;
+    align-items: flex-start;
+  }
+  .speaker-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    min-width: 130px;
+    flex-shrink: 0;
+  }
+  .label-agent {
+    color: #1abc9c;
+  }
+  .label-customer {
+    color: #e74c3c;
+  }
+  .instruction-block {
+    background: rgba(255, 204, 0, 0.1);
+    border-left: 4px solid #ffcc00;
+    padding: 12px 20px;
+    margin: 20px 0;
+    color: #ffcc00;
+    font-style: italic;
+    font-size: 15px;
+    line-height: 1.6;
+    border-radius: 0 6px 6px 0;
+  }
+  .inline-instruction {
+    color: #ffcc00;
+    font-style: italic;
+    font-weight: bold;
+  }
+  .bullet-list {
+    margin: 15px 0 15px 130px;
+    padding-left: 0;
+    list-style-type: none;
+  }
+  .bullet-list li {
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 20px;
+  }
+  .bullet-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #ffcc00;
+    font-size: 18px;
+  }
+</style>
+</head>
+<body>
+  <div class="overlay">
+    <h1>CAMPAIGN NAME : ID THEFT PROGRAM</h1>
+    
+    <div class="meta-header">E-COMMERCE PLATFORM: AMAZON</div>
+
+    <div class="instruction-block">INTRODUCTION</div> 
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-agent">🎧 Agent:</span>
+      <span>Thank you for calling the Amazon Fraud Control Department, my name is PHONE NAME. How can I help you?</span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-customer">👤 CUSTOMER:</span>
+      <span>I have received a message showing that your account is locked due to suspicious activities and your card along with your banking credentials may be at risk.</span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-agent">🎧 Agent:</span>
+      <span>I am sorry for any inconvenience this has caused you. Before we start, what is your first and last name and the email address linked to your Amazon account? <span class="inline-instruction">(GET THE PHONE NUMBER FROM THE DIALER)</span></span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-customer">👤 CUSTOMER:</span>
+      <span>Provides his name and email.</span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-agent">🎧 Agent:</span>
+      <span>Thank you for the information. And your phone number is <span class="inline-instruction">(PROVIDE THE PHONE NUMBER FROM THE DIALER)</span></span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-customer">👤 CUSTOMER:</span>
+      <span>Yes</span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-agent">🎧 Agent:</span>
+      <span>In case we get disconnected, do you have a landline number that I can call back?</span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-customer">👤 CUSTOMER:</span>
+      <span>Yes or No <span class="inline-instruction">(If yes, ask for the landline number)</span></span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-agent">🎧 Agent:</span>
+      <span>Thank you! As part of the verification process, when is your DOB?</span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-customer">👤 CUSTOMER:</span>
+      <span>Date of birth</span>
+    </div>
+
+    <div class="instruction-block">
+      If customer refuses to give DOB - I asked for your birth date to confirm that I’m speaking with someone of legal age and authorized to access the Amazon account.
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-agent">🎧 Agent:</span>
+      <span>And your address?</span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-customer">👤 CUSTOMER:</span>
+      <span>Address <span class="inline-instruction">(confirm any apt or unit numbers)</span></span>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-agent">🎧 Agent:</span>
+      <span>Thank you, I am now reviewing your account. While checking, let me ask you a few questions. Apart from you is there anyone else who may have had the access to your account? Maybe your spouse?</span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-customer">👤 CUSTOMER:</span>
+      <span>Could be yes or no <span class="inline-instruction">(confirm the marital status)</span></span>
+    </div>
+
+    <div class="instruction-block">
+      If customer’s response is unclear – this is just part of the verification process, can you confirm your marital status?
+    </div>
+
+    <div class="instruction-block">
+      If customer wants to know why you need to confirm the marital status – just for us to confirm if there is someone else who may have had the access to your account.
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-agent">🎧 Agent:</span>
+      <span>Have you recently travelled in the past months?</span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-customer">👤 CUSTOMER:</span>
+      <span>Yes or No <span class="inline-instruction">(If yes, ask for the location?)</span></span>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-agent">🎧 Agent:</span>
+      <span>While reviewing your account, I noticed login attempts from multiple locations, including Florida, California, Arizona, and New York, aside from your location in CUSTOMER STATE. Do you recognize these login attempts?</span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-customer">👤 CUSTOMER:</span>
+      <span>NO</span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-agent">🎧 Agent:</span>
+      <span>Since you do not recognize these login attempts, your account may have been compromised that is why you received the error message. <br><br>Based on our review, your account is at risk and will be temporarily suspended while the investigation is ongoing. <br><br>But don’t worry, I’ll assist you in creating an investigative report which I will submit to FTC. <br><br>I will guide you through the process as long as we work together.</span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-customer">👤 Customer:</span>
+      <span>Ok</span>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-agent">🎧 Agent:</span>
+      <span>During our review, we identified two Amazon accounts registered under your name — one Business account and one Personal account. Could you please confirm whether these accounts belong to you or if you recognize them?</span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-customer">👤 Customer:</span>
+      <span>I have a personal account. (Or business account)</span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-agent">🎧 Agent:</span>
+      <span>The reason why I am confirming is because I can see that there is an additional business account that was created under your name. Did you set up another business account?</span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-customer">👤 Customer:</span>
+      <span>NO</span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-agent">🎧 Agent:</span>
+      <span>I want to be very honest with you if we don’t get this resolved as soon as possible the situation can escalate very quickly. Especially that I can see orders and charges placed under your identity in this business account. I need you to understand the severity of the situation as this could potentially lead to further unauthorized charges and greater compromise of your identity. Now, I need you to answer every question accurately and immediately, because every detail determines the next step in protecting your information.</span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-customer">👤 Customer:</span>
+      <span><span class="inline-instruction">(wait for customer response)</span></span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-agent">🎧 Agent:</span>
+      <span>I will give you the orders and charges so please confirm if you authorized any of these. <br>1 iPhone 17 $1199 full payment BOA card ending 0341 shipped to 1640 Chestnut Ave, Winter Park, FL 32789 shipped last…<span class="inline-instruction">(check the date on the template)</span> <br>1 Macbook $1399 full payment JPMC card ending 0069 shipped to 2790 West 5th Street, Brooklyn, NY 11224 shipped last……<span class="inline-instruction">(check the date on the template)</span></span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-customer">👤 Customer:</span>
+      <span>No</span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-agent">🎧 Agent:</span>
+      <span>These orders and bank accounts are not associated with you, correct?</span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-customer">👤 Customer:</span>
+      <span>Yes</span>
+    </div>
+
+    <div class="instruction-block">
+      I don't see any charges in my card for the orders you just mentioned - I want to reassure you that your bank information was not used for these orders. The individuals who accessed your account used a different card. It’s possible that the card they used may also have been stolen, which can be stressful to think about. Because the orders were placed under your name, it’s important that we address this as soon as possible, so you’re protected.
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-agent">🎧 Agent:</span>
+      <span>Are you using a debit or credit card with Amazon?</span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-customer">👤 Customer:</span>
+      <span>Yes <span class="inline-instruction">(confirm if it is a debit or savings account)</span></span>
+    </div>
+
+    <div class="instruction-block">
+      If customer asks why you’re asking for their method of payment with Amazon – We just wanted to ensure that your card is not compromised as well. This is a way for us to protect your payment information with us.
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-agent">🎧 Agent:</span>
+      <span>Is your card linked to your checking or savings account?</span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-customer">👤 Customer:</span>
+      <span>Yes</span>
+    </div>
+
+    <div class="instruction-block">
+      If customer asks why you need to know if it is linked to a checking or savings account - I get where you are coming from the only reason I had to ask is because I would like to make sure that your banking information is not yet compromised. This is to protect you from further damage.
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-agent">🎧 Agent:</span>
+      <span>With which bank?</span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-customer">👤 Customer:</span>
+      <span><span class="inline-instruction">(will disclose bank name)</span></span>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-agent">🎧 Agent:</span>
+      <span>At this point, this is no longer a simple security concern. Since this clearly qualifies as a potential fraud and identity theft case, I am obligated by law to create an official investigative report and escalate this to the FTC so they can take over and provide the resolution of this matter at the federal level.</span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-customer">👤 Customer:</span>
+      <span>Ok</span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-agent">🎧 Agent:</span>
+      <span>What device do you normally use when trying to access your Amazon account?</span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-customer">👤 Customer:</span>
+      <span>Laptop/Cellphone/Ipad</span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-agent">🎧 Agent:</span>
+      <span>Have you ever connected your device to a public wifi network? (coffee shops, airport etc)</span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-customer">👤 Customer:</span>
+      <span><span class="inline-instruction">(response could be yes or no)</span></span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-agent">🎧 Agent:</span>
+      <span>Does your vehicle have a wifi connection that you use?</span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-customer">👤 Customer:</span>
+      <span><span class="inline-instruction">(response could be yes or no)</span></span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-agent">🎧 Agent:</span>
+      <span>Security issues like this can occur if a device is connected to public Wi-Fi networks, such as at airports, hospitals, coffee shops, or other public places. They can also happen if sensitive information is shared through phishing emails or unsafe downloads.</span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-customer">👤 Customer:</span>
+      <span>Ok</span>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-agent">🎧 Agent:</span>
+      <span>The alarming part is that it is even possible that the bank accounts used in paying the unauthorized orders under your name are also stolen. If the legitimate owners of those bank accounts file a complaint you will be held responsible. And we don’t want that to happen. <br><br>For your protection, we will immediately transfer this call to FTC, who are authorized to handle such matters directly. They will assist you in resolving the case and prevent any further misuse of your personal or financial information. Are we clear so far?</span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-customer">👤 Customer:</span>
+      <span>Ok</span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-agent">🎧 Agent:</span>
+      <span>Before we proceed with submitting an investigative report, I will conduct a full security check to ensure that your personal information and credit status have not been affected. This is not a credit check; this is solely intended to run a full security check under your name.</span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-agent">🎧 Agent:</span>
+      <span>After reviewing your account, your credit does not appear to be affected, but I do see bank accounts opened under your name. One is associated with Truist Financial, another savings account showed up with US Bank, there’s also one with Citibank. Did you set up any bank accounts with these banks?</span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-customer">👤 Customer:</span>
+      <span>NO</span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-agent">🎧 Agent:</span>
+      <span>This may indicate broader identity misuse, so it’s important that we act quickly. The sooner we document and escalate this, the better we can protect your information and prevent further issues. <br><br>I need you to speak with an officer from FTC to help you clear your name from these fraudulent activities and identity theft. At this point, I need you to write down all the information you need before I connect you to the officer.</span>
+    </div>
+
+    <ul class="bullet-list">
+      <li>GIVE YOUR PHONE NAME</li>
+      <li>CASE ID NUMBER</li>
+      <li>UNAUTHORIZED ORDERS (product,</li>
+      <li>CASE ID NUMBER</li>
+      <li>UNAUTHORIZED ORDERS (product, amount, bank used, state and zip code)</li>
+      <li>Names of all banks where accounts have been created under their name</li>
+    </ul>
+
+    <div class="instruction-block">
+      Why do I need to write these information? Can't you just send it to my email? - These information I am asking for you to write down will be needed by the Federal Trade Commission once you get to speak with them. I will connect you to them after I have completed the investigative report from my end. Please be advised that the Federal Trade Commission is the department who will resolve this fraud and identity theft issue under your name.
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-agent">🎧 Agent:</span>
+      <span>Thank you! Just a quick recap of everything we have discussed. Your Amazon account was compromised and hacked. A business account was created under your name without your approval and orders are placed and shipped to different addresses with bank accounts that you are not familiar with. Bank accounts were also established without your authorization. THIS IS FRAUDULENT AND A CLEAR CASE OF IDENTITY THEFT. Are we on the same page?</span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-customer">👤 Customer:</span>
+      <span><span class="inline-instruction">(must be a positive response)</span></span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-agent">🎧 Agent:</span>
+      <span>Please make sure to cooperate with the FTC officer so this will be resolved immediately. Okay?</span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-customer">👤 Customer:</span>
+      <span><span class="inline-instruction">(must be a positive response)</span></span>
+    </div>
+
+    <div class="dialogue-line">
+      <span class="speaker-badge label-agent">🎧 Agent:</span>
+      <span>Do you have any questions? (address additional questions) <br>I will now escalate and transfer this case. <br>Please remain on the line while I connect you over.</span>
+    </div>
+
+    <div class="instruction-block">
+      IF CUSTOMER HAS NO MORE QUESTIONS PROCEED WITH TRANSFER
+    </div>
+
+  </div>
+</body>
+</html>

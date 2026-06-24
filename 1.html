@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Break Schedule</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; padding: 0; }
+    header { background: #2c3e50; color: white; padding: 15px; text-align: center; }
+    .tabs { display: flex; justify-content: center; background: #34495e; }
+    .tabs button { background: none; border: none; color: white; padding: 14px 20px; cursor: pointer; font-size: 16px; }
+    .tabs button.active { background: #1abc9c; }
+    .tab-content { display: none; padding: 20px; }
+    .tab-content.active { display: block; }
+    h2 { color: #2c3e50; border-bottom: 2px solid #1abc9c; padding-bottom: 5px; margin-top: 30px; }
+    h3 { color: #1abc9c; margin-top: 20px; margin-bottom: 10px; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 30px; background: white; }
+    th, td { border: 1px solid #ccc; padding: 10px; text-align: center; }
+    th { background: #1abc9c; color: white; white-space: nowrap; }
+    tr:nth-child(even) { background: #f9f9f9; }
+    tr:hover { background: #d1f2eb; }
+    /* Monospace for time columns for better alignment */
+    td:nth-child(n+3) { font-family: 'Courier New', Courier, monospace; font-weight: bold; color: #2c3e50; }
+  </style>
+</head>
+<body>
+  <header><h1>Break Schedule</h1></header>
+
+  <div class="tabs">
+    <button class="tab-link active" onclick="openTab(event, 'monday')">Monday</button>
+    <button class="tab-link" onclick="openTab(event, 'tue-thu')">Tue & Thu</button>
+    <button class="tab-link" onclick="openTab(event, 'wed-fri')">Wed & Fri</button>
+  </div>
+
+  <div id="monday" class="tab-content active">
+    <h2>Monday Schedule</h2>
+    
+    <h3>LBB Group (Lunch → 1st Break → 2nd Break)</h3>
+    <table>
+      <tr><th>Name</th><th>Seq</th><th>Lunch Break</th><th>1st Break</th><th>2nd Break</th></tr>
+      <tr><td>Edgel Alfred Villanueva</td><td>LBB</td><td>10:45 – 11:45</td><td>02:15 – 02:30</td><td>04:45 – 05:00</td></tr>
+      <tr><td>Elenita Salaya</td><td>LBB</td><td>10:45 – 11:45</td><td>02:15 – 02:30</td><td>04:45 – 05:00</td></tr>
+      <tr><td>Agustin Sirue</td><td>LBB</td><td>10:45 – 11:45</td><td>02:15 – 02:30</td><td>04:45 – 05:00</td></tr>
+      <tr><td>Mayette Tamonan Catig</td><td>LBB</td><td>10:45 – 11:45</td><td>02:15 – 02:30</td><td>04:45 – 05:00</td></tr>
+      <tr><td>Jerico Jacob</td><td>LBB</td><td>10:45 – 11:45</td><td>02:15 – 02:30</td><td>04:45 – 05:00</td></tr>
+      <tr><td>Harold Salas</td><td>LBB</td><td>10:45 – 11:45</td><td>02:15 – 02:30</td><td>04:45 – 05:00</td></tr>
+      <tr><td>Jona Mae Falcutela</td><td>LBB</td><td>11:15 – 12:15</td><td>02:30 – 02:45</td><td>05:00 – 05:15</td></tr>
+      <tr><td>Marianne Dabandan</td><td>LBB</td><td>11:15 – 12:15</td><td>02:30 – 02:45</td><td>05:00 – 05:15</td></tr>
+      <tr><td>Gracelyn Redoble</td><td>LBB</td><td>11:15 – 12:15</td><td>02:30 – 02:45</td><td>05:00 – 05:15</td></tr>
+      <tr><td>Harmony Genovia Lladones</td><td>LBB</td><td>11:15 – 12:15</td><td>02:30 – 02:45</td><td>05:00 – 05:15</td></tr>
+      <tr><td>Justine Celeste</td><td>LBB</td><td>11:15 – 12:15</td><td>02:30 – 02:45</td><td>05:00 – 05:15</td></tr>
+      <tr><td>Revy Mae Ocer</td><td>LBB</td><td>11:15 – 12:15</td><td>02:30 – 02:45</td><td>05:00 – 05:15</td></tr>
+      <tr><td>Czar Ivan Padilla</td><td>LBB</td><td>11:15 – 12:15</td><td>02:30 – 02:45</td><td>05:00 – 05:15</td></tr>
+      <tr><td>Judy Simene Marimon</td><td>LBB</td><td>11:15 – 12:15</td><td>02:30 – 02:45</td><td>05:00 – 05:15</td></tr>
+    </table>
+
+    <h3>BLB Group (1st Break → Lunch → 2nd Break)</h3>
+    <table>
+      <tr><th>Name</th><th>Seq</th><th>1st Break</th><th>Lunch Break</th><th>2nd Break</th></tr>
+      <tr><td>Reserved 2</td><td>BLB</td><td>10:15 – 10:30</td><td>12:45 – 01:45</td><td>04:15 – 04:30</td></tr>
+      <tr><td>Jan Carlo Gacula</td><td>BLB</td><td>10:15 – 10:30</td><td>12:45 – 01:45</td><td>04:15 – 04:30</td></tr>
+      <tr><td>Reserved 3</td><td>BLB</td><td>10:15 – 10:30</td><td>12:45 – 01:45</td><td>04:15 – 04:30</td></tr>
+      <tr><td>Reymart Cercado</td><td>BLB</td><td>10:15 – 10:30</td><td>12:45 – 01:45</td><td>04:15 – 04:30</td></tr>
+      <tr><td>Honeylyn Redoble</td><td>BLB</td><td>10:15 – 10:30</td><td>12:45 – 01:45</td><td>04:15 – 04:30</td></tr>
+      <tr><td>Sylvia Besa</td><td>BLB</td><td>10:30 – 10:45</td><td>01:30 – 02:30</td><td>04:30 – 04:45</td></tr>
+      <tr><td>Roxanne Melody Flor</td><td>BLB</td><td>10:30 – 10:45</td><td>01:30 – 02:30</td><td>04:30 – 04:45</td></tr>
+      <tr><td>Jed Nicole Osera</td><td>BLB</td><td>10:30 – 10:45</td><td>01:15 – 02:15</td><td>04:30 – 04:45</td></tr>
+      <tr><td>Darlene Pearl Lisao</td><td>BLB</td><td>10:30 – 10:45</td><td>01:15 – 02:15</td><td>04:30 – 04:45</td></tr>
+      <tr><td>Rona Mae Lozano</td><td>BLB</td><td>10:30 – 10:45</td><td>01:15 – 02:15</td><td>04:30 – 04:45</td></tr>
+      <tr><td>Mark Anthony Inocente</td><td>BLB</td><td>10:30 – 10:45</td><td>01:15 – 02:15</td><td>04:30 – 04:45</td></tr>
+      <tr><td>Danilo Orge</td><td>BLB</td><td>10:30 – 10:45</td><td>01:15 – 02:15</td><td>04:30 – 04:45</td></tr>
+      <tr><td>Sharon Burgos</td><td>BLB</td><td>10:30 – 10:45</td><td>01:15 – 02:15</td><td>04:30 – 04:45</td></tr>
+      <tr><td>Reserved 4</td><td>BLB</td><td>10:30 – 10:45</td><td>01:15 – 02:15</td><td>04:30 – 04:45</td></tr>
+    </table>
+
+    <h3>BBL Group (1st Break → 2nd Break → Lunch)</h3>
+    <table>
+      <tr><th>Name</th><th>Seq</th><th>1st Break</th><th>2nd Break</th><th>Lunch Break</th></tr>
+      <tr><td>Beverly Flores</td><td>BBL</td><td>09:45 – 10:00</td><td>12:15 – 12:30</td><td>02:45 – 03:45</td></tr>
+      <tr><td>Reserved 1</td><td>BBL</td><td>09:45 – 10:00</td><td>12:15 – 12:30</td><td>02:45 – 03:45</td></tr>
+      <tr><td>Edmar Ricalde Factor</td><td>BBL</td><td>09:45 – 10:00</td><td>12:15 – 12:30</td><td>02:45 – 03:45</td></tr>
+      <tr><td>Kurt Garcia</td><td>BBL</td><td>09:45 – 10:00</td><td>12:15 – 12:30</td><td>02:45 – 03:45</td></tr>
+      <tr><td>Hanaferd Pascual</td><td>BBL</td><td>09:45 – 10:00</td><td>12:15 – 12:30</td><td>02:45 – 03:45</td></tr>
+      <tr><td>Nikko Nones</td><td>BBL</td><td>09:45 – 10:00</td><td>12:15 – 12:30</td><td>02:45 – 03:45</td></tr>
+      <tr><td>Jade Mark Arceo</td><td>BBL</td><td>09:45 – 10:00</td><td>12:15 – 12:30</td><td>02:45 – 03:45</td></tr>
+      <tr><td>Cassie Vinzon</td><td>BBL</td><td>09:45 – 10:00</td><td>12:15 – 12:30</td><td>02:45 – 03:45</td></tr>
+      <tr><td>Jonabeth Acosta</td><td>BBL</td><td>10:00 – 10:15</td><td>12:30 – 12:45</td><td>03:15 – 04:15</td></tr>
+      <tr><td>Junel Villojan</td><td>BBL</td><td>10:00 – 10:15</td><td>12:30 – 12:45</td><td>03:15 – 04:15</td></tr>
+      <tr><td>Elizabeth G. Pitpitan</td><td>BBL</td><td>10:00 – 10:15</td><td>12:30 – 12:45</td><td>03:15 – 04:15</td></tr>
+      <tr><td>Marvin Subang</td><td>BBL</td><td>10:00 – 10:15</td><td>12:30 – 12:45</td><td>03:15 – 04:15</td></tr>
+      <tr><td>Nic Mar Jhon Mortos</td><td>BBL</td><td>10:00 – 10:15</td><td>12:30 – 12:45</td><td>03:15 – 04:15</td></tr>
+      <tr><td>Jordan Celeste</td><td>BBL</td><td>10:00 – 10:15</td><td>12:30 – 12:45</td><td>03:15 – 04:15</td></tr>
+    </table>
+  </div>
+
+  <div id="tue-thu" class="tab-content">
+    <h2>Tuesday & Thursday Schedule</h2>
+    
+    <h3>LBB Group (Lunch → 1st Break → 2nd Break)</h3>
+    <table>
+      <tr><th>Name</th><th>Seq</th><th>Lunch Break</th><th>1st Break</th><th>2nd Break</th></tr>
+      <tr><td>Beverly Flores</td><td>LBB</td><td>10:45 – 11:45</td><td>02:15 – 02:30</td><td>04:45 – 05:00</td></tr>
+      <tr><td>Mayette Tamonan Catig</td><td>LBB</td><td>10:45 – 11:45</td><td>02:15 – 02:30</td><td>04:45 – 05:00</td></tr>
+      <tr><td>Edmar Ricalde Factor</td><td>LBB</td><td>10:45 – 11:45</td><td>02:15 – 02:30</td><td>04:45 – 05:00</td></tr>
+      <tr><td>Kurt Garcia</td><td>LBB</td><td>10:45 – 11:45</td><td>02:15 – 02:30</td><td>04:45 – 05:00</td></tr>
+      <tr><td>Hanaferd Pascual</td><td>LBB</td><td>10:45 – 11:45</td><td>02:15 – 02:30</td><td>04:45 – 05:00</td></tr>
+      <tr><td>Nikko Nones</td><td>LBB</td><td>10:45 – 11:45</td><td>02:15 – 02:30</td><td>04:45 – 05:00</td></tr>
+      <tr><td>Jade Mark Arceo</td><td>LBB</td><td>10:45 – 11:45</td><td>02:15 – 02:30</td><td>04:45 – 05:00</td></tr>
+      <tr><td>Cassie Vinzon</td><td>LBB</td><td>10:45 – 11:45</td><td>02:15 – 02:30</td><td>04:45 – 05:00</td></tr>
+      <tr><td>Jonabeth Acosta</td><td>LBB</td><td>11:15 – 12:15</td><td>02:30 – 02:45</td><td>05:00 – 05:15</td></tr>
+      <tr><td>Junel Villojan</td><td>LBB</td><td>11:15 – 12:15</td><td>02:30 – 02:45</td><td>05:00 – 05:15</td></tr>
+      <tr><td>Elizabeth G. Pitpitan</td><td>LBB</td><td>11:15 – 12:15</td><td>02:30 – 02:45</td><td>05:00 – 05:15</td></tr>
+      <tr><td>Marvin Subang</td><td>LBB</td><td>11:15 – 12:15</td><td>02:30 – 02:45</td><td>05:00 – 05:15</td></tr>
+      <tr><td>Nic Mar Jhon Mortos</td><td>LBB</td><td>11:15 – 12:15</td><td>02:30 – 02:45</td><td>05:00 – 05:15</td></tr>
+      <tr><td>Jordan Celeste</td><td>LBB</td><td>11:15 – 12:15</td><td>02:30 – 02:45</td><td>05:00 – 05:15</td></tr>
+    </table>
+
+    <h3>BLB Group (1st Break → Lunch → 2nd Break)</h3>
+    <table>
+      <tr><th>Name</th><th>Seq</th><th>1st Break</th><th>Lunch Break</th><th>2nd Break</th></tr>
+      <tr><td>Edgel Alfred Villanueva</td><td>BLB</td><td>10:15 – 10:30</td><td>12:45 – 01:45</td><td>04:15 – 04:30</td></tr>
+      <tr><td>Elenita Salaya</td><td>BLB</td><td>10:15 – 10:30</td><td>12:45 – 01:45</td><td>04:15 – 04:30</td></tr>
+      <tr><td>Agustin Sirue</td><td>BLB</td><td>10:15 – 10:30</td><td>12:45 – 01:45</td><td>04:15 – 04:30</td></tr>
+      <tr><td>Reserved 1</td><td>BLB</td><td>10:15 – 10:30</td><td>12:45 – 01:45</td><td>04:15 – 04:30</td></tr>
+      <tr><td>Jerico Jacob</td><td>BLB</td><td>10:15 – 10:30</td><td>12:45 – 01:45</td><td>04:15 – 04:30</td></tr>
+      <tr><td>Harold Salas</td><td>BLB</td><td>10:15 – 10:30</td><td>12:45 – 01:45</td><td>04:15 – 04:30</td></tr>
+      <tr><td>Jona Mae Falcutela</td><td>BLB</td><td>10:15 – 10:30</td><td>12:45 – 01:45</td><td>04:15 – 04:30</td></tr>
+      <tr><td>Marianne Dabandan</td><td>BLB</td><td>10:15 – 10:30</td><td>12:45 – 01:45</td><td>04:15 – 04:30</td></tr>
+      <tr><td>Gracelyn Redoble</td><td>BLB</td><td>10:15 – 10:30</td><td>12:45 – 01:45</td><td>04:15 – 04:30</td></tr>
+      <tr><td>Harmony Genovia Lladones</td><td>BLB</td><td>10:15 – 10:30</td><td>12:45 – 01:45</td><td>04:15 – 04:30</td></tr>
+      <tr><td>Justine Celeste</td><td>BLB</td><td>10:30 – 10:45</td><td>01:15 – 02:15</td><td>04:30 – 04:45</td></tr>
+      <tr><td>Revy Mae Ocer</td><td>BLB</td><td>10:30 – 10:45</td><td>01:15 – 02:15</td><td>04:30 – 04:45</td></tr>
+      <tr><td>Czar Ivan Padilla</td><td>BLB</td><td>10:30 – 10:45</td><td>01:15 – 02:15</td><td>04:30 – 04:45</td></tr>
+      <tr><td>Reserved 2</td><td>BLB</td><td>10:30 – 10:45</td><td>01:15 – 02:15</td><td>04:30 – 04:45</td></tr>
+    </table>
+
+    <h3>BBL Group (1st Break → 2nd Break → Lunch)</h3>
+    <table>
+      <tr><th>Name</th><th>Seq</th><th>1st Break</th><th>2nd Break</th><th>Lunch Break</th></tr>
+      <tr><td>Reserved 1</td><td>BBL</td><td>09:45 – 10:00</td><td>12:15 – 12:30</td><td>02:45 – 03:45</td></tr>
+      <tr><td>Jan Carlo Gacula</td><td>BBL</td><td>09:45 – 10:00</td><td>12:15 – 12:30</td><td>02:45 – 03:45</td></tr>
+      <tr><td>Reserved 2</td><td>BBL</td><td>09:45 – 10:00</td><td>12:15 – 12:30</td><td>02:45 – 03:45</td></tr>
+      <tr><td>Judy Simene Marimon</td><td>BBL</td><td>09:45 – 10:00</td><td>12:15 – 12:30</td><td>02:00 – 03:00</td></tr>
+      <tr><td>Reymart Cercado</td><td>BBL</td><td>09:45 – 10:00</td><td>12:15 – 12:30</td><td>02:45 – 03:45</td></tr>
+      <tr><td>Honeylyn Redoble</td><td>BBL</td><td>09:45 – 10:00</td><td>12:15 – 12:30</td><td>02:45 – 03:45</td></tr>
+      <tr><td>Sylvia Besa</td><td>BBL</td><td>09:45 – 10:00</td><td>12:15 – 12:30</td><td>02:45 – 03:45</td></tr>
+      <tr><td>Roxanne Melody Flor</td><td>BBL</td><td>09:45 – 10:00</td><td>12:15 – 12:30</td><td>02:45 – 03:45</td></tr>
+      <tr><td>Jed Nicole Osera</td><td>BBL</td><td>10:00 – 10:15</td><td>12:30 – 12:45</td><td>03:15 – 04:15</td></tr>
+      <tr><td>Darlene Pearl Lisao</td><td>BBL</td><td>10:00 – 10:15</td><td>12:30 – 12:45</td><td>03:15 – 04:15</td></tr>
+      <tr><td>Rona Mae Lozano</td><td>BBL</td><td>10:00 – 10:15</td><td>12:30 – 12:45</td><td>03:15 – 04:15</td></tr>
+      <tr><td>Mark Anthony Inocente</td><td>BBL</td><td>10:00 – 10:15</td><td>12:30 – 12:45</td><td>03:15 – 04:15</td></tr>
+      <tr><td>Danilo Orge</td><td>BBL</td><td>10:00 – 10:15</td><td>12:30 – 12:45</td><td>03:15 – 04:15</td></tr>
+      <tr><td>Sharon Burgos</td><td>BBL</td><td>10:00 – 10:15</td><td>12:30 – 12:45</td><td>03:15 – 04:15</td></tr>
+    </table>
+  </div>
+
+  <div id="wed-fri" class="tab-content">
+    <h2>Wednesday & Friday Schedule</h2>
+    
+    <h3>LBB Group (Lunch → 1st Break → 2nd Break)</h3>
+    <table>
+      <tr><th>Name</th><th>Seq</th><th>Lunch Break</th><th>1st Break</th><th>2nd Break</th></tr>
+      <tr><td>Reserved 1</td><td>LBB</td><td>10:45 – 11:45</td><td>02:15 – 02:30</td><td>04:45 – 05:00</td></tr>
+      <tr><td>Jan Carlo Gacula</td><td>LBB</td><td>10:45 – 11:45</td><td>02:15 – 02:30</td><td>04:45 – 05:00</td></tr>
+      <tr><td>Reserved 2</td><td>LBB</td><td>10:45 – 11:45</td><td>02:15 – 02:30</td><td>04:45 – 05:00</td></tr>
+      <tr><td>Honeylyn Redoble</td><td>LBB</td><td>10:45 – 11:45</td><td>02:15 – 02:30</td><td>04:45 – 05:00</td></tr>
+      <tr><td>Reymart Cercado</td><td>LBB</td><td>10:45 – 11:45</td><td>02:15 – 02:30</td><td>04:45 – 05:00</td></tr>
+      <tr><td>Roxanne Melody Flor</td><td>LBB</td><td>10:45 – 11:45</td><td>02:15 – 02:30</td><td>04:45 – 05:00</td></tr>
+      <tr><td>Sylvia Besa</td><td>LBB</td><td>10:45 – 11:45</td><td>02:15 – 02:30</td><td>04:45 – 05:00</td></tr>
+      <tr><td>Darlene Pearl Lisao</td><td>LBB</td><td>11:15 – 12:15</td><td>02:30 – 02:45</td><td>05:00 – 05:15</td></tr>
+      <tr><td>Jed Nicole Osera</td><td>LBB</td><td>11:15 – 12:15</td><td>02:30 – 02:45</td><td>05:00 – 05:15</td></tr>
+      <tr><td>Mark Anthony Inocente</td><td>LBB</td><td>11:15 – 12:15</td><td>02:30 – 02:45</td><td>05:00 – 05:15</td></tr>
+      <tr><td>Rona Mae Lozano</td><td>LBB</td><td>11:15 – 12:15</td><td>02:30 – 02:45</td><td>05:00 – 05:15</td></tr>
+      <tr><td>Mayette Tamonan Catig</td><td>LBB</td><td>11:15 – 12:15</td><td>02:30 – 02:45</td><td>05:00 – 05:15</td></tr>
+      <tr><td>Danilo Orge</td><td>LBB</td><td>11:15 – 12:15</td><td>02:30 – 02:45</td><td>05:00 – 05:15</td></tr>
+    </table>
+
+    <h3>BLB Group (1st Break → Lunch → 2nd Break)</h3>
+    <table>
+      <tr><th>Name</th><th>Seq</th><th>1st Break</th><th>Lunch Break</th><th>2nd Break</th></tr>
+      <tr><td>Reserved 1</td><td>BLB</td><td>10:15 – 10:30</td><td>12:45 – 01:45</td><td>04:15 – 04:30</td></tr>
+      <tr><td>Beverly Flores</td><td>BLB</td><td>10:15 – 10:30</td><td>12:45 – 01:45</td><td>04:15 – 04:30</td></tr>
+      <tr><td>Kurt Garcia</td><td>BLB</td><td>10:15 – 10:30</td><td>12:45 – 01:45</td><td>04:15 – 04:30</td></tr>
+      <tr><td>Edmar Ricalde Factor</td><td>BLB</td><td>10:15 – 10:30</td><td>12:45 – 01:45</td><td>04:15 – 04:30</td></tr>
+      <tr><td>Nikko Nones</td><td>BLB</td><td>10:15 – 10:30</td><td>12:45 – 01:45</td><td>04:15 – 04:30</td></tr>
+      <tr><td>Hanaferd Pascual</td><td>BLB</td><td>10:15 – 10:30</td><td>12:45 – 01:45</td><td>04:15 – 04:30</td></tr>
+      <tr><td>Cassie Vinzon</td><td>BLB</td><td>10:15 – 10:30</td><td>12:45 – 01:45</td><td>04:15 – 04:30</td></tr>
+      <tr><td>Jade Mark Arceo</td><td>BLB</td><td>10:15 – 10:30</td><td>12:45 – 01:45</td><td>04:15 – 04:30</td></tr>
+      <tr><td>Judy Simene Marimon</td><td>BLB</td><td>10:30 – 10:45</td><td>01:00 – 02:00</td><td>04:30 – 04:45</td></tr>
+      <tr><td>Jonabeth Acosta</td><td>BLB</td><td>10:30 – 10:45</td><td>01:15 – 02:15</td><td>04:30 – 04:45</td></tr>
+      <tr><td>Junel Villojan</td><td>BLB</td><td>10:30 – 10:45</td><td>01:15 – 02:15</td><td>04:30 – 04:45</td></tr>
+      <tr><td>Elizabeth G. Pitpitan</td><td>BLB</td><td>10:30 – 10:45</td><td>01:15 – 02:15</td><td>04:30 – 04:45</td></tr>
+      <tr><td>Marvin Subang</td><td>BLB</td><td>10:30 – 10:45</td><td>01:15 – 02:15</td><td>04:30 – 04:45</td></tr>
+      <tr><td>Nic Mar Jhon Mortos</td><td>BLB</td><td>10:30 – 10:45</td><td>01:15 – 02:15</td><td>04:30 – 04:45</td></tr>
+      <tr><td>Jordan Celeste</td><td>BLB</td><td>10:30 – 10:45</td><td>01:15 – 02:15</td><td>04:30 – 04:45</td></tr>
+    </table>
+
+    <h3>BBL Group (1st Break → 2nd Break → Lunch)</h3>
+    <table>
+      <tr><th>Name</th><th>Seq</th><th>1st Break</th><th>2nd Break</th><th>Lunch Break</th></tr>
+      <tr><td>Elenita Salaya</td><td>BBL</td><td>09:45 – 10:00</td><td>12:15 – 12:30</td><td>02:45 – 03:45</td></tr>
+      <tr><td>Edgel Alfred Villanueva</td><td>BBL</td><td>09:45 – 10:00</td><td>12:15 – 12:30</td><td>02:45 – 03:45</td></tr>
+      <tr><td>Sharon Burgos</td><td>BBL</td><td>09:45 – 10:00</td><td>12:15 – 12:30</td><td>02:45 – 03:45</td></tr>
+      <tr><td>Agustin Sirue</td><td>BBL</td><td>09:45 – 10:00</td><td>12:15 – 12:30</td><td>02:45 – 03:45</td></tr>
+      <tr><td>Harold Salas</td><td>BBL</td><td>09:45 – 10:00</td><td>12:15 – 12:30</td><td>02:45 – 03:45</td></tr>
+      <tr><td>Jerico Jacob</td><td>BBL</td><td>09:45 – 10:00</td><td>12:15 – 12:30</td><td>02:45 – 03:45</td></tr>
+      <tr><td>Marianne Dabandan</td><td>BBL</td><td>10:00 – 10:15</td><td>12:30 – 12:45</td><td>03:15 – 04:15</td></tr>
+      <tr><td>Jona Mae Falcutela</td><td>BBL</td><td>10:00 – 10:15</td><td>12:30 – 12:45</td><td>03:15 – 04:15</td></tr>
+      <tr><td>Harmony Genovia Lladones</td><td>BBL</td><td>10:00 – 10:15</td><td>12:30 – 12:45</td><td>03:15 – 04:15</td></tr>
+      <tr><td>Gracelyn Redoble</td><td>BBL</td><td>10:00 – 10:15</td><td>12:30 – 12:45</td><td>03:15 – 04:15</td></tr>
+      <tr><td>Revy Mae Ocer</td><td>BBL</td><td>10:00 – 10:15</td><td>12:30 – 12:45</td><td>03:15 – 04:15</td></tr>
+      <tr><td>Justine Celeste</td><td>BBL</td><td>10:00 – 10:15</td><td>12:30 – 12:45</td><td>03:15 – 04:15</td></tr>
+      <tr><td>Reserved 3</td><td>BBL</td><td>10:00 – 10:15</td><td>12:30 – 12:45</td><td>03:15 – 04:15</td></tr>
+      <tr><td>Czar Ivan Padilla</td><td>BBL</td><td>10:00 – 10:15</td><td>12:30 – 12:45</td><td>03:15 – 04:15</td></tr>
+    </table>
+  </div>
+
+  <script>
+    function openTab(evt, tabName) {
+      const contents = document.querySelectorAll(".tab-content");
+      const links = document.querySelectorAll(".tab-link");
+      contents.forEach(c => c.classList.remove("active"));
+      links.forEach(l => l.classList.remove("active"));
+      document.getElementById(tabName).classList.add("active");
+      evt.currentTarget.classList.add("active");
+    }
+  </script>
+</body>
+</html>

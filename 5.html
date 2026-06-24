@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Objections & Rebuttals</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f9;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      /* 👇 Background photo applied directly to the container/table area 👇 */
+      background: url('photo1.jpeg') no-repeat center center local; 
+      background-size: cover;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background: rgba(44, 62, 80, 0.9); /* Slight transparency for header */
+      color: #fff;
+      border-radius: 6px 6px 0 0;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background: transparent; /* Makes the table transparent to see the photo behind it */
+    }
+    
+    th, td {
+      border: 1px solid rgba(204, 204, 204, 0.5);
+      padding: 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    
+    th {
+      background: #34495e;
+      color: #fff;
+    }
+    
+    /* semi-transparent background overlays on cells so text remains crisp and readable */
+    td {
+      background: rgba(255, 255, 255, 0.88); 
+    }
+    
+    tr:nth-child(even) td {
+      background: rgba(249, 249, 249, 0.92);
+    }
+    
+    .rebuttal {
+      display: none;
+      margin-top: 10px;
+      padding: 10px;
+      background: rgba(236, 240, 241, 0.95);
+      border-left: 4px solid #2980b9;
+      white-space: pre-line;
+      color: #222;
+    }
+    
+    button {
+      background: #2980b9;
+      color: #fff;
+      border: none;
+      padding: 6px 12px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    
+    button:hover {
+      background: #1f6391;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Objections & Rebuttals</h1>
+      <p>Amazon Fraud Control Department Script</p>
+    </header>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Customer Objection</th>
+          <th>Rebuttal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>How do I verify that I’m connected to the real Amazon customer care team?</td><td><button onclick="toggleRebuttal(this)">Show Rebuttal</button><div class="rebuttal">Remember the error message you saw earlier when you tried logging into your account? It included a phone number to call—that’s why you have me on the line now. You’ve reached the Amazon Fraud Control Department.</div></td></tr>
+        <tr><td>If the customer is not convinced</td><td><button onclick="toggleRebuttal(this)">Show Rebuttal</button><div class="rebuttal">You can provide your phone name and your Amazon Employee number</div></td></tr>
+        <tr><td>You don’t sound like Steve to me at all (Accent issue)</td><td><button onclick="toggleRebuttal(this)">Show Rebuttal</button><div class="rebuttal">I am half American which is probably why you have recognized a distinct accent. Regardless of my accent as long as we both understand each other, rest assured I can help you with your concern.</div></td></tr>
+        <tr><td>What do you mean my account is being accessed in multiple locations?</td><td><button onclick="toggleRebuttal(this)">Show Rebuttal</button><div class="rebuttal">This is precisely the reason we need to conduct further verification, as it appears you’re not familiar with these login attempts. Right?</div></td></tr>
+        <tr><td>I don't see any charges in my card for the orders you just mentioned.</td><td><button onclick="toggleRebuttal(this)">Show Rebuttal</button><div class="rebuttal">I want to reassure you that your bank information was not used for these orders. The individuals who accessed your account used a different card. It’s possible that the card they used may also have been stolen, which can be stressful to think about. Because the orders were placed under your name, it’s important that we address this as soon as possible so you’re protected. \n\nPlease know that you’re not alone in this—I’m here to help you through every step. I’ll guide you on what to do next and provide the information you need before I let you speak with someone from the Federal Trade Commission.</div></td></tr>
+        <tr><td>You have stated that orders were delivered using my identity. However, I have checked my account records, and no such deductions have taken place. Please clarify how this conclusion was reached and provide supporting evidence.</td><td><button onclick="toggleRebuttal(this)">Show Rebuttal</button><div class="rebuttal">It’s possible that, since these are fraudulent activities, someone may have accessed your account and used your identity to place the orders. That could explain why you’re not seeing any charges on your bank account. It’s very important that we act immediately to prevent any further fraudulent transactions under your name.</div></td></tr>
+        <tr><td>You have stated that hackers penetrated my network. I would like to undestand how that is possible, considering I have never shared my ID or Password with anyone, nor have I ever connected to a public Wi-Fi network. Please explain how such a breach could occur in my case and provide any technical evidence to support your claim.</td><td><button onclick="toggleRebuttal(this)">Show Rebuttal</button><div class="rebuttal">Normally, issues like these happens when you accidentally click phishing emails or maybe you have downloaded some browser installs which copies everything you do on your computer and publish those information on the Dark Web.</div></td></tr>
+        <tr><td>I don’t trust you guys and I will talk to the Federal Trade Commission on my own.</td><td><button onclick="toggleRebuttal(this)">Show Rebuttal</button><div class="rebuttal">I completely understand your hesitation—fraud and identity theft are serious matters. These activities need to be reported immediately to prevent any further occurrences, especially since they’re being done under your name. The phone number you called connects you directly to Amazon’s dedicated Fraud Team, so you’re speaking with the right department to get this resolved as quickly as possible. We also work closely with the Federal Trade Commission on cases like this, so to avoid any delays, it’s best that you allow us to assist you right away.</div></td></tr>
+        <tr><td>You mentioned that my account was used in certain states. However, I have never been to those states in my life, and I have not authorized anyone else to use my account there. Could you please explain how you concluded that my account was used in those locations and provide supporting evidence.</td><td><button onclick="toggleRebuttal(this)">Show Rebuttal</button><div class="rebuttal">Since your account was compromised, it appears that unauthorized individuals have been logging in and completing transactions from different locations, which strongly suggests identity theft. The error message you received was meant to alert you about these unauthorized activities. It’s important that we address this immediately to secure your account and prevent further issues.</div></td></tr>
+        <tr><td>Customer refuses to give date of birth.</td><td><button onclick="toggleRebuttal(this)">Show Rebuttal</button><div class="rebuttal">I asked for your birth date to confirm that I’m speaking with someone of legal age and authorized to access the Amazon account.</div></td></tr>
+        <tr><td>Customer refuses to give SSN</td><td><button onclick="toggleRebuttal(this)">Show Rebuttal</button><div class="rebuttal">I totally understand your hesitation, and I want you to know that I’m with you on this. We just need your SSN as part of the investigation we’re doing together with the Federal Trade Commission. This helps us make sure your identity hasn’t been fully compromised and that your credit standing hasn’t been affected by the unauthorized orders made under your name. \n\nWe will run a full security check to ensure there is no HIT on your personal and credit status since there are purchases made under your name. In case there is a HIT, we will request to have it removed since these transactions are unauthorized. What's your social?</div></td></tr>
+        <tr><td>Customer refuses to give banking details</td><td><button onclick="toggleRebuttal(this)">Show Rebuttal</button><div class="rebuttal">I get where you are coming from the only reason I had to ask is because I would like to make sure that your banking information is not yet compromised. This is to protect you from further damage.</div></td></tr>
+        <tr><td>Don't you already have my banking details from your end?</td><td><button onclick="toggleRebuttal(this)">Show Rebuttal</button><div class="rebuttal">I understand however due to your account being compromised, the system has automatically secured all your information as mandated by the FTC which is why some of your information with your Amazon account has been protected. I needed to be sure that your bank information are not yet compromised.</div></td></tr>
+        <tr><td>Don't you already have my email address from your end?</td><td><button onclick="toggleRebuttal(this)">Show Rebuttal</button><div class="rebuttal">I understand however due to your account being compromised, the system has automatically secured all your information as mandated by the FTC for Identity Verification which is why some of your information with your Amazon account has been protected. I needed to be sure that you will receive the updates from us and the FTC.</div></td></tr>
+        <tr><td>Why do I need to write these information? Can't you just send it to my email?</td><td><button onclick="toggleRebuttal(this)">Show Rebuttal</button><div class="rebuttal">These information I am asking for you to write down will be needed by the Federal Trade Commission once you get to speak with them. I will connect you to them after I have completed the investigative report from my end. Please be advised that the Federal Trade Commission is the department who will resolve this fraud and identity theft issue under your name.</div></td></tr>
+        <tr><td>Will I get to speak to an American from the FTC?</td><td><button onclick="toggleRebuttal(this)">Show Rebuttal</button><div class="rebuttal">I can guarantee that the personnel you will be speaking with from the Federal Trade Commission is licensed by the US Government and has been working with similar cases as yours for several years now. They are well equipped and has the full knowledge on how to resolve fraud and identity theft issues.</div></td></tr>
+        <tr><td>I got the error message on my phone but I can still access my account on my laptop. How is that possible?</td><td><button onclick="toggleRebuttal(this)">Show Rebuttal</button><div class="rebuttal">First rebuttal: Amazon flagged your phone's IP address because unusual activities started. Right now, it's not yet synced to the PC, but it should sync within the day. I advise you not to open it yet while we work on it. \n\nFollow up rebuttal: The error message showing on your phone hasn’t synchronized yet with the login on your laptop. This likely means that your mobile device was the one accessed, and the information stored there may have been compromised. This may also have something to do with your device’s IP address, so I highly suggest that you avoid accessing any of those accounts while we work on resolving this issue.</div></td></tr>
+        <tr><td>I can see that my Amazon account is no longer locked.</td><td><button onclick="toggleRebuttal(this)">Show Rebuttal</button><div class="rebuttal">Please refrain from accessing your account for now, as doing so may interfere with the suspension request currently in progress. As mentioned, we need to suspend your account to ensure that no unauthorized orders or fraudulent activities can be made under your name.</div></td></tr>
+        <tr><td>What is the Federal Trade Commission number?</td><td><button onclick="toggleRebuttal(this)">Show Rebuttal</button><div class="rebuttal">They use an internal line because the Federal Trade Commission is a private agency authorized by the government to handle fraud and identity-theft cases. To reach them, customers must first speak with a Fraud Resolution Department like ours.</div></td></tr>
+        <tr><td>Why am I not seeing this business account on my end?</td><td><button onclick="toggleRebuttal(this)">Show Rebuttal</button><div class="rebuttal">Rebuttal: Hackers can generate new login credentials once they obtain your personal information. That’s why you don’t see this fraudulent business account as it was created using a different email address. \n\nFollow up: They have your name, date of birth and address but created a different set of credentials for the other business account.</div></td></tr>
+        <tr><td>If the customer is in a rush</td><td><button onclick="toggleRebuttal(this)">Show Rebuttal</button><div class="rebuttal">I understand that you're in a rush right now. However, now that they have your information it is even possible that bank accounts used for illegal activities or financial crimes will be created under your name. \n\nIf things go wrong, you will be held responsible for something that you did not do. We don't want that to happen so please be patient and let's help each other in order to resolve this.</div></td></tr>
+        <tr><td>If the customer wants to call the POLICE / LAWYER</td><td><button onclick="toggleRebuttal(this)">Show Rebuttal</button><div class="rebuttal">You have the right to do that. However, since I am here already and this is happening on our platform we are responsible to create a report and we will be the one who will transfer you directly to the right authority which is the Federal Trade Commission as we work closely with them specially with this kind of issues. This is to protect us as a business and you as our valued customer.</div></td></tr>
+        <tr><td>If the customer asks for the account numbers or other account information of the unauthorized bank accounts created under their name</td><td><button onclick="toggleRebuttal(this)">Show Rebuttal</button><div class="rebuttal">This concern is beyond the scope of our support. Under applicable law and regulatory authority, only Federal Trade Commission officers are authorized to handle and resolve this matter. Therefore, you will be required to speak with them directly, as they are the appropriate officials to confirm and proceed accordingly.</div></td></tr>
+        <tr><td>Where did you get the results of your security check?</td><td><button onclick="toggleRebuttal(this)">Show Rebuttal</button><div class="rebuttal">Security check results are generated from an official report accessed through a secured portal authorized by FinCEN (Financial Crimes Enforcement Network)</div></td></tr>
+        <tr><td>Can I have the toll free number for the Amazon Fraud Control Department?</td><td><button onclick="toggleRebuttal(this)">Show Rebuttal</button><div class="rebuttal">I understand your request for the number; however, it is an internal contact line. Customers are only routed to us when an error message appears stating that their account might be compromised.</div></td></tr>
+        <tr><td>If a customer states that they have a CREDIT LOCK and it is impossible to open new bank accounts under their name without their authorization.</td><td><button onclick="toggleRebuttal(this)">Show Rebuttal</button><div class="rebuttal">I understand, however it’s still possible to have an identity theft issue even if there’s a lock on a credit report. A credit lock (or freeze) mainly prevents new credit accounts from being opened in that person’s name, but personal information can still be used for scams and fraud since some institutions may not check credit reports before processing certain transactions. So while a credit lock is a strong preventive measure, it’s not a complete shield.</div></td></tr>
+        <tr><td>If the customer states that they are recording the call, please use the following rebuttal:</td><td><button onclick="toggleRebuttal(this)">Show Rebuttal</button><div class="rebuttal">As part of our security standard imposed by the Federal Trade Commission under Accountability Act or Financial Privacy Rules, we cannot allow you to record this conversation since we are discussing sensitive personal and financial information.</div></td></tr>
+        <tr><td>If the customer insists on recording</td><td><button onclick="toggleRebuttal(this)">Show Rebuttal</button><div class="rebuttal">If you choose to continue recording the call, I will be unable to proceed due to confidentiality and security requirements.</div></td></tr>
+        <tr><td>For customers who say they don’t believe they reached the correct department, think the error message is false, or suspect a scam</td><td><button onclick="toggleRebuttal(this)">Show Rebuttal</button><div class="rebuttal">I understand your frustration. There has been an increase in fraudulent activity, which is why Amazon notifies customers immediately when their account may be at risk. This department exists because many customers have had their accounts compromised, and our role is to help secure their accounts and resolve any issues related to unauthorized activity.</div></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    function toggleRebuttal(button) {
+      const rebuttal = button.nextElementSibling;
+      if (rebuttal.style.display === "block") {
+        rebuttal.style.display = "none";
+        button.textContent = "Show Rebuttal";
+      } else {
+        rebuttal.style.display = "block";
+        button.textContent = "Hide Rebuttal";
+      }
+    }
+  </script>
+</body>
+</html>
