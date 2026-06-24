@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Luca Scott Space APP - Executive Dashboard</title>
+  <style>
+    :root {
+      --bg-primary: #fdfbf7;
+      --bg-surface: #f4f1de;
+      --bg-input: #ffffff;
+      --text-main: #2b2d42;
+      --text-muted: #6c757d;
+      --text-light: #f8fafc;
+      --accent: #e07a5f;
+      --accent-hover: #f4a261;
+      --danger: #d90429;
+      --danger-hover: #b3001b;
+      --utility: #3d405b;
+      --utility-hover: #2b2d42;
+      --border-color: #e0dbcf;
+    }
+
+    body {
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-main);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    
+    header.header-banner {
+      width: 100%;
+      min-height: 160px;
+      position: relative;
+      background-image: linear-gradient(to right, rgba(43, 45, 66, 0.9) 30%, rgba(43, 45, 66, 0.5) 70%, rgba(43, 45, 66, 0.9)), url('photo1.jpeg');
+      background-size: cover;
+      background-position: center;
+      border-bottom: 3px solid var(--accent);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      padding: 30px 40px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      z-index: 10;
+    }
+
+    .header-container {
+      width: 100%;
+      max-width: 1520px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    header.header-banner h2 {
+      margin: 0;
+      font-size: 2em;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #fff;
+      font-weight: 700;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+      border-left: 5px solid var(--accent);
+      padding-left: 15px;
+    }
+
+    header.header-banner .group-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 12px 20px;
+      border-radius: 8px;
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(255,255,255,0.2);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+
+    header.header-banner .group-info .title {
+      font-size: 0.8em;
+      font-weight: 700;
+      color: #f4a261;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    }
+
+    header.header-banner .tfn-grid {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    header.header-banner .tfn-badge {
+      background: rgba(43, 45, 66, 0.8);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.85em;
+      color: #fff;
+      font-family: 'Courier New', monospace;
+    }
+
+    .dashboard-container {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 30px;
+      max-width: 1600px;
+      width: 100%;
+      margin: 30px auto;
+      padding: 0 40px;
+      box-sizing: border-box;
+      align-items: start;
+    }
+
+    @media (max-width: 1024px) {
+      .dashboard-container { grid-template-columns: 1fr; }
+      .sticky-panel { position: static !important; }
+    }
+
+    #caseForm, #output-panel, .video-panel {
+      background: var(--bg-surface);
+      color: var(--text-main);
+      padding: 30px;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 10px 25px rgba(61, 64, 91, 0.08);
+    }
+
+    .sticky-panel { position: sticky; top: 30px; }
+
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .form-group.full-width { grid-column: span 2; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group label { font-size: 0.8em; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); font-weight: 700; }
+    input, textarea, select { width: 100%; box-sizing: border-box; padding: 10px 14px; background: var(--bg-input); color: var(--text-main); border: 1px solid #ced4da; border-radius: 6px; font-size: 0.95em; }
+
+    .button-panel { margin-top: 25px; display: flex; gap: 12px; flex-wrap: wrap; border-top: 1px solid var(--border-color); padding-top: 20px; }
+    button { padding: 11px 22px; font-weight: 600; border-radius: 6px; border: none; cursor: pointer; font-size: 0.9em; transition: all 0.2s ease; }
+    button.btn-primary { background: var(--accent); color: white; }
+    button.btn-danger { background: var(--danger); color: #fff; }
+    button.btn-utility { background: var(--utility); color: var(--text-light); }
+
+    .panel-title { font-size: 1.1em; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--utility); margin: 0 0 15px 0; }
+    #output { white-space: pre-wrap; border: 1px solid var(--border-color); border-radius: 8px; padding: 18px; background: #ffffff; font-family: 'Courier New', monospace; font-size: 0.95em; min-height: 350px; overflow-y: auto; }
+    
+    .video-panel { margin-top: 30px; }
+    .video-container { width: 100%; border-radius: 8px; overflow: hidden; border: 1px solid var(--border-color); background: #000; }
+    #seqVideo { width: 100%; display: block; }
+    
+    #fwCanvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; }
+  </style>
+</head>
+<body>
+
+<canvas id="fwCanvas"></canvas>
+
+<header class="header-banner">
+  <div class="header-container">
+    <h2>Amazon Fraud Control Department</h2>
+    <div class="group-info">
+      <div class="title">Contact Support Channels</div>
+      <div class="tfn-grid">
+        <div class="tfn-badge"><span>G1:</span> 980-243-8784</div>
+        <div class="tfn-badge"><span>G2:</span> 862-285-9226</div>
+        <div class="tfn-badge"><span>G4:</span> 774-430-5004</div>
+        <div class="tfn-badge"><span>G5:</span> 774-237-6482</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="dashboard-container">
+  <form id="caseForm">
+    <div class="form-grid">
+      <div class="form-group"><label>Transfer Number</label><input name="transfer number"></div>
+      <div class="form-group"><label>Transfer From</label><input name="transfer from" value="Luca Scott"></div>
+      <div class="form-group full-width"><label>Notes</label><textarea name="notes" rows="4">- Unauthorized business account June 15&#10;- Made up bank accounts June 16&#10;- Made up orders shipped June 17</textarea></div>
+      <div class="form-group"><label>Case ID #</label><div class="case-id-row"><select id="casePrefix" name="casePrefix"><option value="">-- Prefix --</option><option value="FTCJ">FTCJ</option><option value="FTCI">FTCI</option><option value="FTCK">FTCK</option></select><input type="text" id="caseNumber" name="caseNumber" placeholder="Enter number"></div></div>
+      <div class="form-group"><label>Customer Name</label><input name="customer name"></div>
+      <div class="form-group full-width"><label>Customer Address</label><input name="customer address"></div>
+      <div class="form-group"><label>Landline</label><input name="landline"></div>
+      <div class="form-group"><label>Cell Phone</label><input name="cellphone"></div>
+      <div class="form-group"><label>Email Address</label><input type="email" name="email"></div>
+      <div class="form-group"><label>Date of Birth</label><input type="date" name="dob"></div>
+      <div class="form-group"><label>Marital Status</label><select name="marital status"><option></option><option>Single</option><option>Married</option><option>Divorced</option><option>Widowed</option></select></div>
+      <div class="form-group"><label>Has a Car</label><select name="has car"><option></option><option>Yes</option><option>No</option></select></div>
+      <div class="form-group"><label>Suspect</label><div style="display: flex; gap: 10px;"><select id="suspectSelect" name="suspect" style="flex: 1;"><option value="">-- Not specified --</option><option value="None">None</option><option value="Other">Other</option></select><input type="text" id="suspectName" name="suspectName" placeholder="Enter suspect name" style="display:none; flex: 1;"></div></div>
+      <div class="form-group"><label>Banks</label><textarea name="banks" rows="1">US Bank, Citibank and Truist Financial</textarea></div>
+      <div class="form-group full-width"><label>Made Up Purchase Charges</label><textarea name="Made up charges" rows="3">1 iPhone 17 $1199 full payment BOA card ending 0341Shipped to: 1640 Chestnut Ave, Winter Park, FL 32789 (June 17)&#10;1 Macbook $1499 full payment JPMC card ending 0069Shipped to: 2790 West 5th Street, Brooklyn, NY 11224 (June 17)</textarea></div>
+    </div>
+    <div class="button-panel">
+      <button type="button" class="btn-primary" onclick="generateOutput()">Generate Log</button>
+      <button type="button" class="btn-danger" onclick="resetForm()">Reset Form</button>
+      <button type="button" class="btn-utility" onclick="openScript()">Script Docs</button>
+      <button type="button" class="btn-utility" onclick="openRebuttals()">Rebuttals</button>
+    </div>
+  </form>
+
+  <div class="sticky-panel">
+    <div id="output-panel">
+      <h3 class="panel-title">CUSTOMER INFORMATION</h3>
+      <div id="output">Generated customer information logs will render here...</div>
+    </div>
+    <div class="video-panel">
+      <h3 class="panel-title">LIVE FEED</h3>
+      <div class="video-container">
+        <video id="seqVideo" autoplay muted playsinline></video>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const videoList = [
+    "https://github.com/user-attachments/assets/a8b954bc-3293-42cc-8557-e009c75ffa33",
+    "https://github.com/user-attachments/assets/1c3d9b3b-8d35-44d5-a375-4dc629744a3e",
+    "https://github.com/user-attachments/assets/1c46a845-eba4-4f60-933d-eabe5e9a1a10"
+  ];
+  const videoPlayer = document.getElementById('seqVideo');
+  let currentVideoIndex = 0;
+  videoPlayer.src = videoList[0];
+  videoPlayer.addEventListener('ended', () => {
+    currentVideoIndex = (currentVideoIndex + 1) % videoList.length;
+    videoPlayer.src = videoList[currentVideoIndex];
+    videoPlayer.play();
+  });
+
+  function generateOutput(){
+    let t="";
+    let prefix=document.getElementById('casePrefix').value.trim();
+    let num=document.getElementById('caseNumber').value.trim();
+    let suspectSelect=document.getElementById('suspectSelect').value.trim();
+    let suspectName=document.getElementById('suspectName').value.trim();
+    [...document.getElementById('caseForm').elements].forEach(el=>{
+      if(el.name){
+        let v=el.value.trim();
+        if(el.name==="notes"){ t+="NOTES:\n"+v+"\n\n"+"CASE ID #: "+(prefix+num)+"\n\n"; }
+        else if(el.name==="suspect" || el.name==="suspectName" || el.name==="casePrefix" || el.name==="caseNumber"){}
+        else if(el.name==="has car"){
+          t+="HAS A CAR: "+v+"\n\n";
+          let s = (suspectSelect==="Other") ? suspectName : (suspectSelect==="None" ? "None" : "");
+          t+="SUSPECT: "+s+"\n\n";
+        } else { t+=el.name.toUpperCase()+": "+v+"\n\n"; }
+      }
+    });
+    document.getElementById('output').textContent=t.trim();
+  }
+
+  function resetForm(){ document.getElementById('caseForm').reset(); document.getElementById('output').textContent="Generated customer information logs will render here..."; }
+  function openScript(){ window.open("3.html","_blank"); }
+  function openRebuttals(){ window.open("5.html","_blank"); }
+</script>
+</body>
+</html>
