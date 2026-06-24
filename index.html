@@ -183,7 +183,7 @@
       <div class="form-group"><label>Transfer Number</label><input name="transfer number"></div>
       <div class="form-group"><label>Transfer From</label><input name="transfer from" value="Luca Scott"></div>
       <div class="form-group full-width"><label>Notes</label><textarea name="notes" rows="4">- Unauthorized business account June 15&#10;- Made up bank accounts June 16&#10;- Made up orders shipped June 17</textarea></div>
-      <div class="form-group"><label>Case ID #</label><div class="case-id-row"><select id="casePrefix" name="casePrefix"><option value="">-- Prefix --</option><option value="FTCJ">FTCJ</option><option value="FTCI">FTCI</option><option value="FTCK">FTCK</option></select><input type="text" id="caseNumber" name="caseNumber" placeholder="Enter number"></div></div>
+      <div class="form-group"><label>Case ID #</label><div class="case-id-row" style="display: flex; gap: 10px;"><select id="casePrefix" name="casePrefix" style="flex: 1;"><option value="">-- Prefix --</option><option value="FTCJ">FTCJ</option><option value="FTCI">FTCI</option><option value="FTCK">FTCK</option></select><input type="text" id="caseNumber" name="caseNumber" placeholder="Enter number" style="flex: 2;"></div></div>
       <div class="form-group"><label>Customer Name</label><input name="customer name"></div>
       <div class="form-group full-width"><label>Customer Address</label><input name="customer address"></div>
       <div class="form-group"><label>Landline</label><input name="landline"></div>
@@ -194,7 +194,8 @@
       <div class="form-group"><label>Has a Car</label><select name="has car"><option></option><option>Yes</option><option>No</option></select></div>
       <div class="form-group"><label>Suspect</label><div style="display: flex; gap: 10px;"><select id="suspectSelect" name="suspect" style="flex: 1;"><option value="">-- Not specified --</option><option value="None">None</option><option value="Other">Other</option></select><input type="text" id="suspectName" name="suspectName" placeholder="Enter suspect name" style="display:none; flex: 1;"></div></div>
       <div class="form-group"><label>Banks</label><textarea name="banks" rows="1">US Bank, Citibank and Truist Financial</textarea></div>
-      <div class="form-group full-width"><label>Made Up Purchase Charges</label><textarea name="Made up charges" rows="3">1 iPhone 17 $1199 full payment BOA card ending 0341Shipped to: 1640 Chestnut Ave, Winter Park, FL 32789 (June 17)&#10;1 Macbook $1499 full payment JPMC card ending 0069Shipped to: 2790 West 5th Street, Brooklyn, NY 11224 (June 17)</textarea></div>
+      <div class="form-group full-width"><label>Made Up Purchase Charges</label><textarea name="made up charges" rows="3">1 iPhone 17 $1199 full payment BOA card ending 0341Shipped to: 1640 Chestnut Ave, Winter Park, FL 32789 (June 17)&#10;1 Macbook $1499 full payment JPMC card ending 0069Shipped to: 2790 West 5th Street, Brooklyn, NY 11224 (June 17)</textarea></div>
+      <div class="form-group full-width"><label>Bank Details</label><textarea name="bank details" rows="2"></textarea></div>
     </div>
     <div class="button-panel">
       <button type="button" class="btn-primary" onclick="generateOutput()">Generate Log</button>
@@ -231,6 +232,10 @@
     currentVideoIndex = (currentVideoIndex + 1) % videoList.length;
     videoPlayer.src = videoList[currentVideoIndex];
     videoPlayer.play();
+  });
+
+  document.getElementById('suspectSelect').addEventListener('change', function() {
+    document.getElementById('suspectName').style.display = (this.value === "Other") ? "inline-block" : "none";
   });
 
   function generateOutput(){
